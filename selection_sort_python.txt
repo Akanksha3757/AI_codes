@@ -1,0 +1,16 @@
+n = int(input("Enter Number Of Elements In Array: "))
+print("Enter Your Numbers For Sort")
+arr = [int(input()) for i in range(n)]
+print("unsorted list", arr)
+
+for i in range(n-1):
+    min = i
+    for j in range((i+1), n):
+        if (arr[j] < arr[min]):
+            min = j
+            
+    if (arr[i] != arr[min]):
+        arr[i], arr[min] = arr[min], arr[i]
+
+print("Sorted array is:")        
+print(arr)        
